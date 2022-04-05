@@ -1,0 +1,32 @@
+
+html, body {
+text-align: center;
+background-image: linear-gradient(to left,#7cd6f1,#62cdee,#41aceb)
+}
+footer {
+  position: relative;
+  bottom: 0%;
+  
+}
+header {
+  margin-bottom: -10px;
+}
+footer{
+  margin-top: 13px;
+}
+.footer-item {
+  color: whitesmoke;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.fa-github {
+  color: white;
+  transition: 0.3s;
+}
+
+.fa-github:hover {
+  color: black;
+  transition: 0.3s;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "projekt504",
+  "version": "1.0.0",
+  "description": "Ukoly do skoly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComradeBobo/projekt504.git"
+  },
+  "keywords": [
+    "CSV",
+    "ComradeBobo"
+  ],
+  "author": "ComradeBobo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComradeBobo/projekt504/issues"
+  },
+  "homepage": "https://github.com/ComradeBobo/projekt504#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
