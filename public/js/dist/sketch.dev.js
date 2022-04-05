@@ -4,9 +4,9 @@ var mode;
 var s;
 var scl = 20;
 var food;
-var score = 0;
 var audio = new Audio('./media/eat.mp3');
 var deathSound = new Audio('./media/deathxd.mp3');
+var form = document.getElementById('formular');
 
 function setup() {
   mode = 0;
@@ -39,7 +39,6 @@ function draw() {
     if (s.eat(food)) {
       audio.play();
       pickLocation();
-      score++;
     }
 
     fill(255, 0, 50);
@@ -55,10 +54,9 @@ function draw() {
       textSize(25);
       text("Pro pokračování stiskněte F5 : )", width / 2 - 175, height / 2 + 100);
       noLoop();
-      statusBar();
+      form.style.display = 'block';
     } else {
       fill(color(200));
-      statusBar();
     }
   }
 }
@@ -88,15 +86,6 @@ function keyPressed() {
   } else if (keyCode === LEFT_ARROW) {
     s.dir(-1, 0);
   }
-}
-/* Funkce pro vypsání hráčova skóre */
-
-
-function statusBar() {
-  strokeWeight(0);
-  textSize(20);
-  textStyle(BOLD);
-  text("Sk\xF3re: ".concat(score), 10, height - 535);
 }
 
 function Snake() {
