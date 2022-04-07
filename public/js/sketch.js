@@ -1,6 +1,7 @@
 var mode;
 var s;
 var scl = 20;
+var score = 0;
 var food;
 var audio = new Audio('./media/eat.mp3');
 var deathSound = new Audio('./media/deathxd.mp3');
@@ -33,6 +34,7 @@ function draw() {
     if (s.eat(food)) {
       audio.play();
       pickLocation();
+      score++;
 
     }
     fill(255, 0, 50);
@@ -49,6 +51,7 @@ function draw() {
       text("Pro pokračování stiskněte F5 : )", width/2 - 175, height /2 + 100);
       noLoop();
       form.style.display = 'block';
+      document.getElementById('points').value = score;
     } else {
       fill(color(200));
     }
