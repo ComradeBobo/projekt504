@@ -16,7 +16,8 @@ app.set("views", path.join(__dirname, "views"));
 
 app.post('/savedata', urlencodedParser, (req, res) => {
     let date = moment().format('YYYY-MM-DD');
-    let str = `"${req.body.player}","${req.body.points}","${date}"\n`;
+    let time = moment().format('h:mm:ss a');
+    let str = `"${req.body.player}","${req.body.points}","${date}","${time}"\n`;
     fs.appendFile(path.join(__dirname, 'data/results.csv'), str, function (err) {
     if (err) {
     console.error(err);
@@ -29,12 +30,12 @@ app.post('/savedata', urlencodedParser, (req, res) => {
     res.redirect(301, '/');
     });
 
-app.get("/projekt504", (req, res) => {
-    csvtojson({headers:['player','points','datum']}).fromFile(path.join(__dirname,
+app.get("/results", (req, res) => {
+    csvtojson({headers:['player','points','datum','time']}).fromFile(path.join(__dirname,
     'data/results.csv'))
     .then(data => {
     console.log(data);
-    res.render('index', {nadpis: "Scoreboard", results: data});
+    res.render('results', {nadpis: "Scoreboard", results: data});
     })
      .catch(err => {
     console.log(err);

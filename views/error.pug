@@ -1,18 +1,25 @@
 doctype html
 html
-head
-title Chybová stránka
-link(rel='stylesheet'
+    head
+        title Chybová stránka
+        link(rel='stylesheet'
 href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
-body
-header.jumbotron-fluid.bg-danger.p-3
-h1.text-center.text-white #{nadpis}
-main.container
-.alert.alert-danger #{chyba}
-footer.bg-dark.p-2
-.container.text-white
-p.float-right
-a(href="/") Zpět na formulář
-p &copy; 2022 - IT2 - NodeJS
+        <link rel="icon" href=".//img/logo.png" type="image/png">    
+
+    body
+    header.jumbotron-fluid.bg-danger.p-3
+        h1.text-center.text-white #{nadpis}
+
+    main.container
+        .alert.alert-danger #{chyba}
+
+    footer.bg-dark.p-2
+        .container.text-white
+            p.float-right
+                button.bg-primary
+                    a.text-white(href="/") Zpět na hru
+            p &copy; Robin Harazim - IT2 - 2022
+            p Školní email: it2003@sspu-opava.cz
+
 script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js')
 script(src='https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js')

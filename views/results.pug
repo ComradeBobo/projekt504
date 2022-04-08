@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Scoreboard
+        link(rel='stylesheet'
+href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+        <link rel="icon" href=".//img/logo.png" type="image/png">
+    body
+        header.jumbotron-fluid.bg-primary.p-3
+            h1.text-center.text-white #{nadpis}
+
+        main.container
+            table(class="table table-striped")
+                thead
+                    tr.bg-dark.text-light
+                        th Jméno hráče:
+                        th Skóre:
+                        th Datum:
+                        th Čas:
+                tbody
+                    each player in results
+                        tr
+                            td #{player.player}
+                            td #{player.points}
+                            td #{player.datum}
+                            td #{player.time}
+
+        footer.bg-dark.p-2
+            .container.text-white
+                p.float-right
+                    button.bg-primary
+                        a.text-white(href="/") Zpět na hru
+                p &copy; Robin Harazim - IT2 - 2022
+                p Školní email: it2003@sspu-opava.cz
+
+
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js')
+script(src='https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js')
